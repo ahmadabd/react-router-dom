@@ -5,7 +5,7 @@ class Header extends Component{
   render(){
     return(
       <div>
-        <nav className="site-header sticky-top py-1">
+        <nav className="site-header sticky-top py-1" style={{ background:'grey' }}>
           <div className="container d-flex flex-column flex-md-row justify-content-between">
             <Link className="py-2 d-none d-md-inline-block" to="/">Home</Link>
             <Link className="py-2 d-none d-md-inline-block" to="/about">About</Link>
