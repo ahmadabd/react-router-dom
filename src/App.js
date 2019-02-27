@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/sections/Header';
 import { Route } from 'react-router-dom';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
+import './style/css/bootstrap.min.css';
+import './style/css/bootstrap-rtl.min.css';
+
 
 class App extends Component{
   render(){
