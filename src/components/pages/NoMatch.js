@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Home extends Component{
+class NoMatch extends Component{
   render(){
     return (
       <div>
-        <h2>Home page</h2>
+        <h2>404 Not Found</h2>
       </div>
     );
   }
 }
 
-export default Home;
+export default NoMatch;
