@@ -1,7 +1,30 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import Product from './../Product';
 
 class Home extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      article : []
+    }
+  }
+
+  componentDidMount(){
+    axios.get('http://roocket.org/api/products')
+      .then(response => {  // Response
+        //console.log(response);
+        const {current_page, data} = response.data.data;  // Stores response in data tag (response has 3 data tag)
+        this.setState({
+          article : data
+        });
+      })
+      .catch( error => {  // Errors
+        console.log(error);
+      })
+  }
+
+
   render(){
     return (
       <div className="container">
@@ -10,28 +33,7 @@ class Home extends Component{
         </div>
 
         <div className="row rtl">
-          <div className="col-lg-4" style={{ marginBottom : 20 }}>
-            <div className="card">
-              <img className="card-img-top" src="" alt="Card image cap" />
-              <div className="card-body">
-                  <h4 className="card-title">Card title</h4>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <Link className="btn btn-primary" to={`product/1`}>Go someWhere</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row rtl">
-          <div className="col-lg-4" style={{ marginBottom : 20 }}>
-            <div className="card">
-              <img className="card-img-top" src="" alt="Card image cap" />
-              <div className="card-body">
-                  <h4 className="card-title">Card title</h4>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <Link className="btn btn-primary" to={`product/2`}>Go someWhere</Link>
-              </div>
-            </div>
-          </div>
+          {this.state.article.map((product, index) => <Product product={product} key={index} />)}
         </div>
 
       </div>
