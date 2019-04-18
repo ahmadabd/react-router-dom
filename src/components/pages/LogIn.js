@@ -15,6 +15,7 @@ class LogIn extends Component{
     }
   }
 
+  // Check email and password fields for validating data
   handleValidation(callback){
     let fields = this.state.fields;
     let errors = {};
@@ -45,6 +46,7 @@ class LogIn extends Component{
     });
   }
 
+  // stores password and email input tag datas in state.fields
   handleChange(event){
     let fields = this.state.fields;
     fields[event.target.name] = event.target.value;
@@ -53,6 +55,7 @@ class LogIn extends Component{
     });
   }
 
+  // sends password and email input tag datas to http://.../api/login AND get api_token from server and stores on localStorage
   handleRequest(){
     const {email, password} = this.state.fields;
 
@@ -69,6 +72,7 @@ class LogIn extends Component{
       })
   }
 
+  // runs after submit data and sends data to handleValidation() func
   handleSubmit(event){
     event.preventDefault();
 
