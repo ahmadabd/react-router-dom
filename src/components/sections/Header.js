@@ -10,6 +10,7 @@ class Header extends Component{
             <Link className="py-2 d-none d-md-inline-block nav-link" to="/">Home</Link>
             <Link className="py-2 d-none d-md-inline-block nav-link" to="/about">About</Link>
             <Link className="py-2 d-none d-md-inline-block nav-link" to="/contact">Contact</Link>
+            <Link className="py-2 d-none d-md-inline-block nav-link" to="/login">Log in</Link>
           </div>
         </nav>
       </div>

@@ -8,6 +8,7 @@ import './style/css/bootstrap.min.css';
 import './style/css/bootstrap-rtl.min.css';
 import Product from './components/pages/Product';
 import NoMatch from './components/pages/NoMatch';
+import LogIn from './components/pages/LogIn';
 
 
 class App extends Component{
@@ -22,6 +23,7 @@ class App extends Component{
             <Route path="/product/:id" component={Product} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/login" component={LogIn} />
             <Route component={NoMatch} />
           </Switch>
         </div>

@@ -8,7 +8,8 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-infinite-scroller": "^1.2.4",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "validator": "^10.11.0"
   },
   "scripts": {
     "start": "react-scripts start",
